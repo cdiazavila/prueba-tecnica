@@ -1,0 +1,23 @@
+<app-barra></app-barra>
+<div class="col-md-3">
+    <div *ngIf="aprobar()" class="div-left">
+
+        <p>{{ equipos1 }}</p>
+        <p>{{precio1}}</p>
+        <button type="button" class="btn btn-danger" (click)="eliminarE1()">Eliminar</button>
+        <hr>
+    </div>
+    <div *ngIf="aprobarE2()" class="col-md-12 div-left">
+        <p>{{equipo2}}</p>
+        <p>{{precio2}}</p>
+
+        <button type="button" class="btn btn-danger" (click)="eliminarE2()">Eliminar</button>
+        <hr>
+    </div>
+    <div *ngIf="aprobarJugador()" class="col-md-12 div-left">
+        <p>{{jugador}}</p>
+        <p>{{precioJugador}}</p>
+        <button type="button" class="btn btn-danger" (click)="eliminarJugador()">Eliminar</button>
+        <hr>
+    </div>
+</div>

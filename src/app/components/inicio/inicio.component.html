@@ -1,0 +1,44 @@
+<app-barra></app-barra>
+
+<div *ngFor="let lista of listaPartidos" class="col-md-3">
+    <p>{{ lista.name }}</p>
+    <hr>
+    <p>{{lista.markets[0].name}}</p>
+
+    <a href="/lista/{{lista.markets[0].selections[0].id}}" class="btn btn-ligh me-2">
+        {{lista.markets[0].selections[0].name}}
+        <br>
+        {{lista.markets[0].selections[0].price}}
+
+
+    </a>
+
+    <a href="/lista/{{lista.markets[0].selections[1].id}}" class="ms-4 btn btn-ligh">
+        {{lista.markets[0].selections[1].name}}
+        <br>
+        {{lista.markets[0].selections[1].price}}
+
+    </a>
+    <hr>
+    <p>{{lista.markets[1].name}}</p>
+    <a class="ms-4 btn btn-ligh" href="/lista/{{lista.markets[1].selections[0].id}}">
+        {{lista.markets[1].selections[0].name}}
+        <br>
+        {{lista.markets[1].selections[0].price}}
+
+    </a>
+
+    <a class="ms-4 btn btn-ligh"  href="/lista/{{lista.markets[1].selections[1].id}}">
+        {{lista.markets[1].selections[1].name}}
+        <br>
+        {{lista.markets[1].selections[1].price}}
+
+    </a>
+    <a class="ms-4 btn btn-ligh"  href="/lista/{{lista.markets[1].selections[2].id}}">
+        {{lista.markets[1].selections[2].name}}
+        <br>
+        {{lista.markets[1].selections[2].price}}
+
+    </a>
+
+</div>
